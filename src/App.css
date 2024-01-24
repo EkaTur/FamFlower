@@ -1,38 +1,287 @@
-.App {
-  text-align: center;
+body {
+    font-family: 'Cinzel Decorative', serif;
+    margin: 0;
+    background-image: url(Assets/bg.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+hr{
+    top: 220px;
+    opacity: 0.3;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+hr.hrStyle {
+    overflow: visible;
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+hr.hrStyle:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2{
+    font-size: 45px ; 
 }
+
+.contactLink {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bolder;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+li{
+    margin: 5px;
+}
+
+ul{
+    width: 70%;
+}
+
+.link {
+    margin: 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.link:hover{
+    background-color: rgba(250, 235, 215, 0.226);
+}
+
+.homePar {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.iconContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    opacity: 0;
+}
+
+.headerContainerApp {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.buttonsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+}
+
+.btn {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 15px;
+    font-size: 20px;
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 700;
+    background-color: transparent;
+    z-index: 1;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgba(250, 235, 215, 0.226);
+}
+
+.productsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.flowersContainer {
+    margin: 5px;
+    padding: 2%;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.flowersContainer p {
+    margin: 0;
+}
+
+.flowerPic {
+    border-radius: 20px;
+}
+
+.pricePar {
+    font-size: 20px;
+}
+
+.aboutHeader {
+    display: flex;
+    justify-content: center;
+}
+
+.contactsHeader {
+    display: flex;
+    justify-content: center;
+}
+
+.containerUs {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.UsButtonsCont {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.parUsContainer {
+    text-align: center;
+}
+
+.parUs {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.btnNext, .btnPrevious {
+    font-size: 80px;
+    border: none;
+    background-color: transparent;
+}
+
+.usPhoto {
+    border-radius: 20px;
+}
+
+.containerContacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerDelivery {
+    display: flex;
+    justify-content: center;
+}
+
+.deliveryContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.deliveryLink {
+    color: black;
+}
+
+.headerProductCard {
+    font-size: 25px;
+    text-align: center;
+}
+
+.productCardContainer {
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.parProductCard {
+    text-align: center;
+}
+
+.buttonBack {
+    width: 100px;
+    font-size: 18px;
+    font-family: 'Cinzel Decorative', serif;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+.productCardPhoto {
+    border-radius: 20px;
+    opacity: 0;
+}
+
+@media all and (max-width: 800px) {
+    .usPhoto{
+        width: 700px;
+        height: 450px;
+    }
+
+    .containerUs {
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 500px) {
+    iframe {
+        width: 350px;
+    }
+
+    .usPhoto {
+        width: 350px;
+        height: 230px;
+    }
+
+    .containerContacts, .contactsHeader {
+        text-align: center;
+    }
+
+    .productCardContainer {
+        flex-direction: column;
+    }
+
+    .productCardPhoto {
+        width: 350px;
+        height: 450px;
+    }
+}
+
