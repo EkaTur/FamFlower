@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { data } from "./data";
+import { data } from "./FlowersData";
 import { gsap } from 'gsap/all';
 import { useEffect, useRef } from "react";
 

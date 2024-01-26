@@ -1,4 +1,4 @@
-import { dataTwo } from "./dataTwo";
+import { dataTwo } from "./AboutUsData";
 import { useState } from "react";
 
 const AboutUs = () => {

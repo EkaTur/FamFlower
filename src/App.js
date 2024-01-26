@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import {
     BrowserRouter as Router,
     Routes,
@@ -12,12 +12,10 @@ import Flowers from './Flowers';
 import Home from './Home';
 import icon from './Assets/icon.png';
 import Delivery from './Delivery';
-import LoaderPage from './Loader/LoaderPage';
 import ProductCard from './ProductCard';
 import { gsap } from 'gsap/all';
 
 function App() {
-  const [myLoader, setMyLoader] = useState(false);
 
   const header = useRef(null);
   const iconCont = useRef(null);
@@ -34,20 +32,8 @@ function App() {
     });
   }, [iconCont]);
 
-  const handleClick = () => {
-    setMyLoader(true);
-  }
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setMyLoader(false);
-    }, 1000);
-    return () => clearTimeout(timeoutId);
-  }, [myLoader]);
-
   return (
     <div>
-      {myLoader && <LoaderPage />}
       <div className='headerContainerApp' ref={header}>
         <h3>Fam Flowers</h3>
       </div>
@@ -56,11 +42,11 @@ function App() {
       </div>
       <Router>
         <nav>
-            <Link className='link' onClick={handleClick} to='/'>HOME</Link>
-            <Link className='link' onClick={handleClick} to='/flowers'>OUR FLOWERS</Link>
-            <Link className='link' onClick={handleClick} to='/contacts'>CONTACTS</Link>
-            <Link className='link' onClick={handleClick} to='/delivery'>DELIVERY</Link>
-            <Link className='link' onClick={handleClick} to='/about'>ABOUT US</Link>
+            <Link className='link' to='/'>HOME</Link>
+            <Link className='link' to='/flowers'>OUR FLOWERS</Link>
+            <Link className='link' to='/contacts'>CONTACTS</Link>
+            <Link className='link' to='/delivery'>DELIVERY</Link>
+            <Link className='link' to='/about'>ABOUT US</Link>
         </nav>
       
         <Routes>

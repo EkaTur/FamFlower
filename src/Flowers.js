@@ -4,7 +4,7 @@ import {
     Link
 } from "react-router-dom";
 import Buttons from './Buttons';
-import { data } from './data';
+import { data } from './FlowersData';
 
 const Flowers = () => {
     const [myFlowers, setMyFlowers] = useState(data);
@@ -16,8 +16,8 @@ const Flowers = () => {
                 <Buttons data={data} setMyFlowers={setMyFlowers} />
             </div>
             <div className='productsContainer'>
-                {myFlowers.map(({ name, title, price, image }, index) => (
-                    <div className='flowersContainer' key={index}>
+                {myFlowers.map(({ name, title, price, image, id }) => (
+                    <div className='flowersContainer' key={id}>
                         <div>
                         </div>
                         <Link to={`/about/${title}`}>
