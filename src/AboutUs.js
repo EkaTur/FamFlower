@@ -42,8 +42,8 @@ const AboutUs = () => {
                 <p className="parUs">{description}</p>
             </div>
             <div className="UsButtonsCont">
-                <button className="btnPrevious" onClick={previousUsPhoto}>🖘</button>
-                <button className="btnNext" onClick={nextUsPhoto}>🖙</button>
+                <button className="btnPrevious" onClick={previousUsPhoto}>Back</button>
+                <button className="btnNext" onClick={nextUsPhoto}>Next</button>
             </div>
         </div>
     )

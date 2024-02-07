@@ -76,10 +76,6 @@ ul{
     border-radius: 20px;
 }
 
-/* .link:hover{
-    
-} */
-
 .homePar {
     font-size: 18px;
     font-weight: bold;
@@ -109,6 +105,7 @@ ul{
 .buttonsContainer {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     margin: 0;
 }
 
@@ -199,9 +196,13 @@ button:hover {
 }
 
 .btnNext, .btnPrevious {
-    font-size: 80px;
-    border: none;
+    font-size: 16px;
+    font-family: 'Cinzel Decorative', serif;
     background-color: transparent;
+    border-radius: 20px;
+    border: 1px solid black;
+    font-weight: bold;
+    margin: 20px;
 }
 
 .usPhoto {
@@ -329,6 +330,10 @@ button:hover {
 
     .containerUs {
         text-align: center;
+    }
+
+    .btn {
+        color: black;
     }
 }
 
