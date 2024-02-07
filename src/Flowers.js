@@ -1,22 +1,30 @@
-import { useState } from 'react';
 import React from 'react';
 import {
     Link
 } from "react-router-dom";
 import Buttons from './Buttons';
 import { data } from './FlowersData';
+import { useDispatch, useSelector } from 'react-redux';
+import { addItemToCart } from './redux/cartSlice';
+import { getSelectedCategory } from './redux/categorySlice';
 
 const Flowers = () => {
-    const [myFlowers, setMyFlowers] = useState(data);
+
+    const selectedCategory = useSelector(getSelectedCategory);
+    const dispatch = useDispatch();
 
     return (
         <div>
             <hr className='hrStyle' />
             <div className="buttonsContainer">
-                <Buttons data={data} setMyFlowers={setMyFlowers} />
+                <Buttons/>
             </div>
             <div className='productsContainer'>
-                {myFlowers.map(({ name, title, price, image, id }) => (
+                {data.filter(flower => {
+                    if (selectedCategory === 'SHOW ALL') return true;
+                    return flower.category.includes(selectedCategory)
+                })
+                    .map(({ name, title, price, image, id }) => (
                     <div className='flowersContainer' key={id}>
                         <div>
                         </div>
@@ -24,7 +32,8 @@ const Flowers = () => {
                             <img className='flowerPic' src={image} alt='itemPhoto' width='300px' height='450px' />
                         </Link>
                         <h3>{name}</h3>
-                        <p className='pricePar'>{price}</p>
+                        <p className='pricePar'>{price} €</p>
+                        <button onClick={() => {dispatch(addItemToCart({myFlowers: { id, name, price, image}, quantity: 1}))}} className='addButton'>ADD TO CART</button>
                     </div>
                 ))}
             </div>
