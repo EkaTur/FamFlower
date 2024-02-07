@@ -323,6 +323,10 @@ button:hover {
 }
 
 @media all and (max-width: 800px) {
+    button {
+        color: black;
+    }
+
     .usPhoto{
         width: 700px;
         height: 450px;
@@ -330,10 +334,6 @@ button:hover {
 
     .containerUs {
         text-align: center;
-    }
-
-    .btn {
-        color: black;
     }
 }
 
