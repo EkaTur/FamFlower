@@ -1,7 +1,8 @@
 import { useDispatch } from 'react-redux';
-import { data } from './FlowersData';
-import { removeItemFromCart } from './redux/cartSlice';
+import { data } from '../../Data/FlowersData';
+import { removeItemFromCart } from '../../redux/cartSlice';
 import { Link } from 'react-router-dom';
+import './CartStyle.css';
 
 const CartItem = ({ cartItem }) => {
 

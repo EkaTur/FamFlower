@@ -1,0 +1,57 @@
+.aboutHeader {
+    display: flex;
+    justify-content: center;
+}
+
+.containerUs {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.usPhoto {
+    border-radius: 20px;
+}
+
+.parUsContainer {
+    text-align: center;
+}
+
+.parUs {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.UsButtonsCont {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.btnNext, .btnPrevious {
+    font-size: 16px;
+    font-family: 'Cinzel Decorative', serif;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 1px solid black;
+    font-weight: bold;
+    margin: 20px;
+}
+
+@media all and (max-width: 800px) {
+    .usPhoto {
+        width: 700px;
+        height: 450px;
+    }
+    
+    .containerUs {
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .usPhoto {
+        width: 350px;
+        height: 230px;
+    }
+}

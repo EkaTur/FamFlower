@@ -1,0 +1,93 @@
+li {
+    margin: 5px;
+}
+
+ul {
+    width: 70%;
+}
+
+.productsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.flowersContainer {
+    margin: 5px;
+    padding: 2%;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.flowersContainer p {
+    margin: 0;
+}
+
+.flowerPic {
+    border-radius: 20px;
+}
+
+.pricePar {
+    font-size: 20px;
+}
+
+.addButton {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 15px;
+    font-size: 20px;
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 700;
+    background-color: transparent;
+}
+
+.productCardContainer {
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.headerProductCard {
+    font-size: 25px;
+    text-align: center;
+}
+
+.productCardPhoto {
+    border-radius: 20px;
+    opacity: 0;
+}
+
+.descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.parProductCard {
+    text-align: center;
+}
+
+.buttonBack {
+    width: 100px;
+    font-size: 18px;
+    font-family: 'Cinzel Decorative', serif;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+@media all and (max-width: 500px) {
+    .productCardContainer {
+        flex-direction: column;
+    }
+
+    .productCardPhoto {
+        width: 350px;
+        height: 450px;
+    }
+}

@@ -1,5 +1,6 @@
-import { dataTwo } from "./AboutUsData";
+import { dataTwo } from "../../Data/AboutUsData";
 import { useState } from "react";
+import './AboutUsStyle.css';
 
 const AboutUs = () => {
 

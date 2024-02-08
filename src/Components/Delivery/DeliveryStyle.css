@@ -1,0 +1,14 @@
+.headerDelivery {
+    display: flex;
+    justify-content: center;
+}
+
+.deliveryContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.deliveryLink {
+    color: black;
+}
+

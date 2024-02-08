@@ -1,7 +1,7 @@
-import floristThree from './Assets/floristThree.jpg';
-import florist from './Assets/florist.jpg';
-import floristTwo from './Assets/floristTwo.jpg';
-import floristFour from './Assets/floristFour.jpg';
+import floristThree from '.././Assets/floristThree.jpg';
+import florist from '.././Assets/florist.jpg';
+import floristTwo from '.././Assets/floristTwo.jpg';
+import floristFour from '.././Assets/floristFour.jpg';
 
 export const dataTwo = [
     {

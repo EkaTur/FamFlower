@@ -1,3 +1,5 @@
+import './DeliveryStyle.css';
+
 const Delivery = () => {
     return (
         <div>

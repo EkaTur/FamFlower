@@ -2,11 +2,12 @@ import React from 'react';
 import {
     Link
 } from "react-router-dom";
-import Buttons from './Buttons';
-import { data } from './FlowersData';
+import Buttons from '../Components/Filter/Buttons';
+import { data } from '../Data/FlowersData';
 import { useDispatch, useSelector } from 'react-redux';
-import { addItemToCart } from './redux/cartSlice';
-import { getSelectedCategory } from './redux/categorySlice';
+import { addItemToCart } from '../redux/cartSlice';
+import { getSelectedCategory } from '../redux/categorySlice';
+import './ProductsStyle.css';
 
 const Flowers = () => {
 
@@ -16,7 +17,7 @@ const Flowers = () => {
     return (
         <div>
             <hr className='hrStyle' />
-            <div className="buttonsContainer">
+            <div>
                 <Buttons/>
             </div>
             <div className='productsContainer'>

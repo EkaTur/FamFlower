@@ -1,0 +1,29 @@
+.buttonsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.categoryButtonSelected {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 15px;
+    font-size: 20px;
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 700;
+    background-color: lightgreen;
+}
+
+.btn {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 15px;
+    font-size: 20px;
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 700;
+    background-color: transparent;
+    z-index: 1;
+}

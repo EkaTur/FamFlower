@@ -1,50 +1,29 @@
-import React, { useEffect, useRef } from 'react';
 import {
     BrowserRouter as Router,
     Routes,
     Route,
     NavLink
 } from "react-router-dom";
-import AboutUs from './AboutUs';
+import AboutUs from './Components/AboutUs/AboutUs';
 import './App.css';
-import Contacts from './Contacts';
-import Flowers from './Flowers';
-import Home from './Home';
-import icon from './Assets/icon.png';
-import Delivery from './Delivery';
-import ProductCard from './ProductCard';
-import { gsap } from 'gsap/all';
-import Cart from './Cart';
+import Contacts from './Components/Contacts/Contacts';
+import Flowers from './Products/Flowers';
+import Home from './Components/Home/Home';
+import Delivery from './Components/Delivery/Delivery';
+import ProductCard from './Products/ProductCard';
+import Cart from './Components/Cart/Cart';
 import { useSelector } from 'react-redux';
 import { getTotalItems } from './redux/cartSlice';
+import Logo from "./Components/Logo/Logo";
+
 
 function App() {
 
   const totalItems = useSelector(getTotalItems);
 
-  const header = useRef(null);
-  const iconCont = useRef(null);
-
-  useEffect(() => {
-    gsap.to(header.current, {
-      opacity: 1, delay: 1, duration: 2 
-    });
-  }, [header]);
-
-  useEffect(() => {
-    gsap.to(iconCont.current, {
-      opacity: 1, delay: 1, duration: 2 
-    });
-  }, [iconCont]);
-
   return (
     <div>
-      <div className='headerContainerApp' ref={header}>
-        <h3>Fam Flowers</h3>
-      </div>
-      <div className='iconContainer' ref={iconCont}>
-        <img src={icon} alt='icon' width='150px' />
-      </div>
+        <Logo />
       <Router>
         <nav>
             <NavLink className='link' to='/' activeClassName='active'>HOME</NavLink>

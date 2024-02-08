@@ -1,7 +1,8 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { data } from "./FlowersData";
+import { data } from "../Data/FlowersData";
 import { gsap } from 'gsap/all';
 import { useEffect, useRef } from "react";
+import './ProductsStyle.css';
 
 const ProductCard = () => {
 
@@ -30,8 +31,8 @@ const ProductCard = () => {
                             <div className="descriptionContainer">
                                 <p className="parProductCard">{element.description}</p>
                                 <ul>
-                                    {element.features.map(item => (
-                                        <li>{item}</li>
+                                    {element.features.map((item, id) => (
+                                        <li key={id}>{item}</li>
                                     ))}
                                 </ul>
                                 <button className="buttonBack" onClick={() => navigate(-1)}>BACK</button>
