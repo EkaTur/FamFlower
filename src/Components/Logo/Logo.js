@@ -1,32 +1,22 @@
-import { useEffect, useRef } from "react";
+import { useLayoutEffect } from "react";
 import { gsap } from 'gsap/all';
 import icon from '../../Assets/icon.png';
 import './LogoStyle.css';
 
 const Logo = () => {
 
-    const header = useRef(null);
-    const iconCont = useRef(null);
-
-    useEffect(() => {
-        gsap.to(header.current, {
-        opacity: 1, delay: 1, duration: 2 
-        });
-    }, [header]);
-
-    useEffect(() => {
-        gsap.to(iconCont.current, {
-        opacity: 1, delay: 1, duration: 2 
-        });
-    }, [iconCont]);
+    useLayoutEffect(() => {
+        gsap.fromTo('.headerLogo', { y: -50, opacity: 0 }, { y: 0, opacity: 1, duration: 3, delay: 1 })
+        gsap.fromTo('.logo', {y: -50, opacity: 0}, {y: 0, opacity: 1, duration: 3})
+    }, [])
 
     return (
         <div>
-            <div className='headerContainerLogo' ref={header}>
-                <h3>Fam Flowers</h3>
+            <div className='headerContainerLogo'>
+                <h3 className="headerLogo">Fam Flowers</h3>
             </div>
-            <div className='iconContainer' ref={iconCont}>
-                <img src={icon} alt='icon' width='150px' />
+            <div className='iconContainer'>
+                <img className="logo" src={icon} alt='icon' width='150px' />
             </div>
         </div>
     )

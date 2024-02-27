@@ -1,8 +1,14 @@
 import { dataTwo } from "../../Data/AboutUsData";
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import './AboutUsStyle.css';
+import gsap from "gsap";
 
 const AboutUs = () => {
+
+    useLayoutEffect(() => {
+        gsap.fromTo('.containerUs', { opacity: 0 }, { opacity: 1, duration: 3 })
+        gsap.fromTo('.aboutHeader', {opacity: 0}, {opacity: 1, duration: 3})
+    }, [])
 
     const [usPhoto, setUsPhoto] = useState(0);
     const { image, description } = dataTwo[usPhoto];

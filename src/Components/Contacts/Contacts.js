@@ -1,6 +1,14 @@
 import './ContactsStyle.css';
+import gsap from 'gsap';
+import { useLayoutEffect } from 'react';
 
 const Contacts = () => {
+
+    useLayoutEffect(() => {
+        gsap.fromTo('.containerContacts', { opacity: 0 }, { opacity: 1, duration: 2, stagger: 0.5 })
+        gsap.fromTo('.contactsHeader', { opacity: 0 }, { opacity: 1, duration: 2})
+    }, [])
+
     return (
         <div>
             <hr className='hrStyle' />

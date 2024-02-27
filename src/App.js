@@ -15,9 +15,14 @@ import Cart from './Components/Cart/Cart';
 import { useSelector } from 'react-redux';
 import { getTotalItems } from './redux/cartSlice';
 import Logo from "./Components/Logo/Logo";
-
+import gsap from "gsap";
+import { useLayoutEffect } from "react";
 
 function App() {
+
+  useLayoutEffect(() => {
+    gsap.fromTo('.link', { opacity: 0 }, { opacity: 1, duration: 3, stagger: 0.5})
+  }, [])
 
   const totalItems = useSelector(getTotalItems);
 
@@ -25,7 +30,7 @@ function App() {
     <div>
         <Logo />
       <Router>
-        <nav>
+        <nav className="nav">
             <NavLink className='link' to='/' activeClassName='active'>HOME</NavLink>
             <NavLink className='link' to='/flowers' activeClassName='active'>OUR FLOWERS</NavLink>
             <NavLink className='link' to='/contacts' activeClassName='active'>CONTACTS</NavLink>

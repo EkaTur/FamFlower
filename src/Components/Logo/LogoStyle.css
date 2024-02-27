@@ -1,7 +1,6 @@
 .headerContainerLogo {
     display: flex;
     justify-content: center;
-    opacity: 0;
 }
 
 .iconContainer {
@@ -9,5 +8,4 @@
     justify-content: center;
     width: 100%;
     margin: 0;
-    opacity: 0;
 }

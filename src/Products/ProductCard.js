@@ -1,18 +1,14 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { data } from "../Data/FlowersData";
 import { gsap } from 'gsap/all';
-import { useEffect, useRef } from "react";
 import './ProductsStyle.css';
+import { useLayoutEffect } from "react";
 
 const ProductCard = () => {
 
-    const pic = useRef(null);
-
-    useEffect(() => {
-        gsap.to(pic.current, {
-        opacity: 1, delay: 1, duration: 2 
-        });
-    }, [pic]);
+    useLayoutEffect(() => {
+        gsap.fromTo('.productCardPhoto', {opacity: 0}, {opacity: 1, duration: 1})
+    }, [])
 
     const { title } = useParams();
     const navigate = useNavigate();
@@ -26,7 +22,7 @@ const ProductCard = () => {
                         <div className="productCardContainer">
                             <div>
                                 <h3 className="headerProductCard">{element.name}</h3>
-                                <img className="productCardPhoto" ref={pic} src={element.image} alt='product' width='400px' height='500px' />
+                                <img className="productCardPhoto" src={element.image} alt='product' width='400px' height='500px' />
                             </div>
                             <div className="descriptionContainer">
                                 <p className="parProductCard">{element.description}</p>

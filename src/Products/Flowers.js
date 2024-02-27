@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
     Link
 } from "react-router-dom";
@@ -8,8 +8,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addItemToCart } from '../redux/cartSlice';
 import { getSelectedCategory } from '../redux/categorySlice';
 import './ProductsStyle.css';
+import gsap from 'gsap';
 
 const Flowers = () => {
+
+    useEffect(() => {
+        gsap.fromTo('.productsContainer', {opacity: 0}, {opacity: 1, duration: 2, stagger: 0.5})
+    })
 
     const selectedCategory = useSelector(getSelectedCategory);
     const dispatch = useDispatch();
