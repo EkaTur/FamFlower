@@ -2,6 +2,10 @@
 
 Welcome to our Flower Shop Website! This project is a simple web application for browsing and purchasing flowers online. It allows users to explore various types of flowers, learn more about them, add them to the cart, and proceed with the purchase.
 
+## Live Demo
+
+You can check out the live version of this website [here](https://famflowers.netlify.app/).
+
 ## Table of Contents
 - [Features](#features)
 - [Usage](#usage)
